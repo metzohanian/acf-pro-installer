@@ -243,7 +243,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 		$key = null;
 		
         if (file_exists(getcwd().DIRECTORY_SEPARATOR.'.env')) {
-			$filepath = getcwd().DIRECTORY_SEPARATOR.'.env';
+			$filePath = getcwd().DIRECTORY_SEPARATOR.'.env';
 			
              // Read file into an array of lines with auto-detected line endings
 			$autodetect = ini_get('auto_detect_line_endings');
