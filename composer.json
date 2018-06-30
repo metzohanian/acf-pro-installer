@@ -1,0 +1,38 @@
+{
+  "name": "metzohanian/acf-pro-installer",
+  "description": "An install helper for Advanced Custom Fields PRO",
+  "type": "composer-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Chad Porter",
+      "email": "chad.porter@metzohanian.com"
+    }
+  ],
+  "keywords": [
+    "wordpress", "composer", "wp", "plugin", "acf", "env", "pro"
+  ],
+  "require": {
+    "php": ">=5.5",
+    "composer-plugin-api": "^1.0"
+  },
+  "require-dev": {
+    "composer/composer": "1.0.*",
+    "phpunit/phpunit": "4.8.*",
+    "squizlabs/php_codesniffer": "2.*",
+    "satooshi/php-coveralls": "1.*"
+  },
+  "autoload": {
+    "psr-4": { 
+		"MetzOhanian\\ACFProInstaller\\": "src/ACFProInstaller" }
+  },
+  "extra": {
+    "class": "MetzOhanian\\ACFProInstaller\\Plugin"
+  },
+  "scripts": {
+    "lint": "phpcs src tests --standard=PSR2",
+    "test": "phpunit",
+    "coverage": "phpunit --coverage-html coverage",
+    "coveralls": "coveralls"
+  }
+}
