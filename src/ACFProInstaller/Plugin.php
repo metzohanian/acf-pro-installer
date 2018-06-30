@@ -253,7 +253,9 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 
 			foreach ($lines as $line) {
 				if (!$this->isComment($line) && $this->looksLikeSetter($line) && $this->isCorrectVariable($line)) {
-					$key = substr($line, strpos($line, self::KEY_ENV_VARIABLE . '=') + 1);
+					$key = substr($line, strpos($line, self::KEY_ENV_VARIABLE . '=') + 12);
+					$key = ltrim($key, "'");
+					$key = rtrim($key, "'");
 				}
 			}
         }
